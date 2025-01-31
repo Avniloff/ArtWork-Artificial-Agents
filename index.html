@@ -196,6 +196,7 @@
             margin: 20px 0;
             max-width: 1000px;
             width: 100%;
+            overflow-x: hidden;
         }
 
         .mockup-content {
@@ -444,6 +445,56 @@
             color: #666;
             width: 100%;
             margin-right: -80px;
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media screen and (max-width: 768px) {
+            .mockup-content {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .interface-mockup {
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .editor-area, .chat-area {
+                min-height: 300px;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Дополнительные медиа-запросы для очень маленьких экранов */
+        @media screen and (max-width: 480px) {
+            .interface-mockup {
+                padding: 5px;
+            }
+
+            .editor-area, .chat-area {
+                min-height: 250px;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p, ul, ol {
+                font-size: 1em;
+            }
         }
 
     </style>
