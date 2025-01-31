@@ -1,0 +1,40 @@
+{
+  "name": "artwork-artificial-agents",
+  "displayName": "ArtWork Artificial Agents",
+  "description": "AI-powered code development assistant for VS Code.",
+  "version": "0.1.0",
+  "publisher": "Avniloff",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:artwork.startChat"
+  ],
+  "main": "./out/src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "artwork.startChat",
+        "title": "Start ArtWork Chat"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/index.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "typescript": "^4.9.4",
+    "vscode-test": "^1.6.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
+} 
